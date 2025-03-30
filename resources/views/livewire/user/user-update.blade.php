@@ -1,6 +1,6 @@
 <div>
     @if($isOpen)
-        <div id="modal">
+        <div>
             <h1>Actualizar Usuario</h1>
 
             <form wire:submit.prevent="updateUser">
