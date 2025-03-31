@@ -9,6 +9,7 @@ use Livewire\Component;
 class UserDelete extends Component
 {
     public $userId;
+    
     public function mount($userId)
     {
         $this->userId = $userId;
