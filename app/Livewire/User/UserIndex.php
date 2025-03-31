@@ -10,8 +10,12 @@ class UserIndex extends Component
     public $search = '';
     public $users = [];
 
-    protected $listeners = ['searchUpdated' => 'buscarUsuarios'];
-
+    protected $listeners = [
+        'searchUpdated' => 'buscarUsuarios',
+        'userUpdated' => '$refresh',
+        'userDestroy' => '$refresh',
+    ];
+    
     public function mount()
     {
         $this->buscarUsuarios();
@@ -31,7 +35,6 @@ class UserIndex extends Component
             session()->flash('error', 'Ocurrió un error en la consulta: ' . $e->getMessage());
         }
     }
-
 
     public function render()
     {
