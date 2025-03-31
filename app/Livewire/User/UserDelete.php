@@ -9,12 +9,9 @@ use Livewire\Component;
 class UserDelete extends Component
 {
     public $userId;
-    public $Active = false;
-
     public function mount($userId)
     {
         $this->userId = $userId;
-        $this->Active = true;
     }
 
     public function destroyUser()
@@ -25,7 +22,6 @@ class UserDelete extends Component
             Log::info('Usuario eliminado: ' . $this->userId);
 
             session()->flash('message', 'Usuario eliminado correctamente.');
-            $this->Active = false;
 
             $this->dispatch('userDestroy')->to(UserIndex::class);
 
