@@ -8,18 +8,13 @@
     @livewireStyles
 </head>
 <body>
-    <h1>Usuarios</h1>
-
-    <h2>Busqueda por filtrado:</h2>
-    <input type="text" id="busqueda" name="busqueda" placeholder="Ingrese el nombre del usuario">
-
-    <ul id="resultado"></ul>
+    
+    @livewire('user.user-index')
 
     <button><a href="{{ route('users.store.view') }}">Crear Usuario</a></button>
 
     @livewire('user.user-update')
 
     @livewireScripts
-    <script src="{{ asset('js/user/searchUser.js') }}"></script>
 </body>
 </html>
