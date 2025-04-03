@@ -1,3 +1,3 @@
 <div>
-    <button wire:click="destroyUser">Eliminar Usuario</button>
+    <button wire:click="destroyUser">Eliminar</button>
 </div>

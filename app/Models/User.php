@@ -12,13 +12,13 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
+    // use HasApiTokens;
 
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory;
-    use HasProfilePhoto;
-    use Notifiable;
-    use TwoFactorAuthenticatable;
+    // /** @use HasFactory<\Database\Factories\UserFactory> */
+    // use HasFactory;
+    // use HasProfilePhoto;
+    // use Notifiable;
+    // use TwoFactorAuthenticatable;
     protected $fillable = [
         'name',
         'lastname',

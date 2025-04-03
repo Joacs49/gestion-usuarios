@@ -8,11 +8,9 @@
     @vite('resources/css/app.css')
     @livewireStyles
 </head>
-<body>
+<body class="bg-container">
     
     @livewire('user.user-index')
-
-    <button><a href="{{ route('users.store.view') }}">Crear Usuario</a></button>
 
     @livewire('user.user-update')
 
