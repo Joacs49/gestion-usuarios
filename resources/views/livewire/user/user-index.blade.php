@@ -2,28 +2,27 @@
 
     <section class="w-95 h-24 bg-blue-500 flex flex-row items-center shadow-md rounded-t-lg">
 
-        <div class="flex flex-col justify-start w-full">
-            <h1 class="text-3xl font-bold text-white">Gestión de Usuarios</h1>
-            <p class="text-white">Administra los usuarios del sistema</p>
+        <div class="flex flex-col justify-start w-full ml-5">
+            <h1 class="text-2xl font-bold text-white">Gestión de Usuarios</h1>
+            <p class="text-white text-paragraph">Administra los usuarios del sistema</p>
         </div>
         
-        <div class="flex flex-row items-center justify-end w-full">
+        <div class="flex flex-row items-center justify-end w-full mr-5">
             @livewire('user.user-show')
             <a href="{{ route('users.store.view') }}" class="bg-white text-blue-600">Nuevo Usuario</a>
         </div>
 
     </section>
 
-    <table class="w-95 border-collapse shadow-md rounded-b-lg ">
+    <table class="w-95 border-collapse shadow-md rounded-b-lg">
         @if (isset($users) && !$users->isEmpty())
-        <thead class="bg-table">
+        <thead class="bg-table border-b-[1px] border-gray-300">
             <tr class="text-center">
-                <th>Usuario</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Ubicación</th>
-                <th>Dirección</th>
-                <th colspan="2">Acciones</th>
+                <th class="p-2">Usuario</th>
+                <th class="p-2">Contacto</th>
+                <th class="p-2">Ubicación</th>
+                <th class="p-2">Dirección</th>
+                <th class="p-2" colspan="2">Acciones</th>
             </tr>
         </thead>
         
@@ -31,14 +30,13 @@
 
         <tbody class="text-center bg-white">
             @forelse ($users as $usuario)
-            <tr>
-                <td>{{ $usuario->name }} {{ $usuario->lastname }}</td>
-                <td>{{ $usuario->email }}</td>
-                <td>{{ $usuario->numberphone }}</td>
-                <td>{{ $usuario->country }}, {{ $usuario->district }}</td>
-                <td>{{ $usuario->direction }}</td>
-                <td><button onclick="Livewire.dispatch('openModal', { data: { id: {{ $usuario->id }} } })">Actualizar</button></td>
-                <td>@livewire('user.user-delete', ['userId' => $usuario->id], key($usuario->id))</td>
+            <tr class="border-b-[1px] border-gray-300">
+                <td class="flex flex-row p-2 text-left"><span class="w-10 h-10 rounded-full">img</span><div class="flex flex-col">{{ $usuario->name }} {{ $usuario->lastname }}<span class="block">{{ $usuario->email }}</span></div></td>
+                <td class="p-2">{{ $usuario->numberphone }}</td>
+                <td class="p-2">{{ $usuario->country }}, {{ $usuario->district }}</td>
+                <td class="p-2">{{ $usuario->direction }}</td>
+                <td class="p-2"><button onclick="Livewire.dispatch('openModal', { data: { id: {{ $usuario->id }} } })">Actualizar</button></td>
+                <td class="p-2">@livewire('user.user-delete', ['userId' => $usuario->id], key($usuario->id))</td>
             </tr>
             @empty
                 <li>No se encontraron usuarios.</li>

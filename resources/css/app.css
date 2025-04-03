@@ -20,6 +20,15 @@
     .bg-table {
         background-color: rgba(248, 248, 248, 1);
     }
+
+    .text-paragraph {
+        font-size: .9rem;
+        line-height: 2rem;
+    }
+
+    .border-search {
+        border-color: rgba(94, 156, 247, 1);
+    }
 }
 
 @theme {
