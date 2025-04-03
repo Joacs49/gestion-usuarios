@@ -8,12 +8,13 @@
     @vite('resources/css/app.css')
     @livewireStyles
 </head>
-<body class="bg-container">
-    
-    @livewire('user.user-index')
+<body>
+    <main class="bg-container">
+        @livewire('user.user-index')
 
-    @livewire('user.user-update')
+        @livewire('user.user-update')
 
-    @livewireScripts
+        @livewireScripts
+    </main>
 </body>
 </html>
