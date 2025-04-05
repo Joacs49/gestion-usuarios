@@ -25,6 +25,7 @@ class UserDelete extends Component
             session()->flash('message', 'Usuario eliminado correctamente.');
 
             $this->dispatch('userDestroy')->to(UserIndex::class);
+            $this->emit('userDeleted'); 
 
         } catch (\Exception $e) {
             Log::error('Error al eliminar usuario: ' . $e->getMessage());

@@ -9,6 +9,10 @@ class UserActionSelect extends Component
     public $usuario;
     public $showSelect = false;
 
+    public $listeners = [
+        'userDeleted' => 'showOptions',  
+    ];
+
     public function mount($usuario )
     {
         $this->usuario  = $usuario;
@@ -17,6 +21,11 @@ class UserActionSelect extends Component
     public function toggleOptions()
     {
         $this->showSelect = !$this->showSelect;
+    }
+
+    public function showOptions()
+    {
+        $this->showSelect = true;
     }
 
     public function render()
