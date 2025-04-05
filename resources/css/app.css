@@ -29,6 +29,10 @@
     .border-search {
         border-color: rgba(94, 156, 247, 1);
     }
+
+    .bg-search {
+        background-color: rgba(76, 145, 246, 1);
+    }
 }
 
 @theme {
