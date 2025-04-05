@@ -13,7 +13,7 @@ class UserActionSelect extends Component
         'userDeleted' => 'showOptions',  
     ];
 
-    public function mount($usuario )
+    public function mount($usuario)
     {
         $this->usuario  = $usuario;
     }

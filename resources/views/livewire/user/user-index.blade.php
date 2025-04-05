@@ -18,7 +18,7 @@
 
     <table class="w-95 border-collapse shadow-md rounded-b-lg">
         @if (isset($users) && !$users->isEmpty())
-        <thead class="bg-table border-b-[1px] border-gray-300 text-gray-500">
+        <thead class="h-12 bg-table border-b-[1px] border-gray-300 text-gray-500">
             <tr class="text-left">
                 <th class="text-sm font-medium pl-4 p-2">Usuario</th>
                 <th class="text-sm font-medium pl-4 p-2">Contacto</th>
@@ -44,7 +44,7 @@
                 <td class="p-2 text-left">{{ $usuario->numberphone }}</td>
                 <td class="p-2 text-left">{{ $usuario->country }}, {{ $usuario->district }}</td>
                 <td class="p-2 text-left">{{ $usuario->direction }}</td>
-                <td>
+                <td class="p-2 text-left">
                     @livewire('user.user-action-select', ['usuario' => $usuario], key($usuario->id))
                 </td>
             </tr>
