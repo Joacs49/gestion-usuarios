@@ -32,8 +32,15 @@
 
         <tbody class="text-center bg-white">
             @forelse ($users as $usuario)
-            <tr class="border-b-[1px] border-gray-300 hover:bg-gray-200 duration-300">
-                <td class="flex flex-row p-2 items-center text-left"><span class="text-center pl-2"><img class="object-cover w-9 h-9" src="https://cdn-icons-png.flaticon.com/512/9512/9512683.png" alt="user"></span><div class="flex flex-col pl-3 text-base">{{ $usuario->name }} {{ $usuario->lastname }}<span class="block text-sm text-gray-500">{{ $usuario->email }}</span></div></td>
+            <tr class="border-b-[1px] border-gray-300 hover:bg-gray-200 duration-300" wire:key="user-{{ $usuario->id }}">
+                <td class="flex flex-row p-2 items-center text-left">
+                    <span class="text-center pl-2">
+                        <img class="object-cover w-9 h-9" src="https://cdn-icons-png.flaticon.com/512/9512/9512683.png" alt="user">
+                    </span>
+                    <div class="flex flex-col pl-3 text-base">{{ $usuario->name }} {{ $usuario->lastname }}
+                        <span class="block text-sm text-gray-500">{{ $usuario->email }}</span>
+                    </div>
+                </td>
                 <td class="p-2 text-left">{{ $usuario->numberphone }}</td>
                 <td class="p-2 text-left">{{ $usuario->country }}, {{ $usuario->district }}</td>
                 <td class="p-2 text-left">{{ $usuario->direction }}</td>
