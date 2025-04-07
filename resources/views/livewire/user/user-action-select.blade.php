@@ -7,7 +7,7 @@
         @if($showSelect)
             <div class="mt-2 p-2 border rounded-md bg-white shadow-lg absolute z-10">
                 <button class="w-full text-left p-2 border-b-2 disabled font-bold">Acciones</button>
-                <button class="w-full text-left p-2 hover:bg-gray-200" onclick="Livewire.dispatch('openModal', { data: { id: {{ $usuario->id }} } })">Actualizar</button>
+                <button class="w-full text-left p-2 hover:bg-gray-200 cursor-pointer" onclick="Livewire.dispatch('openModal', { data: { id: {{ $usuario->id }} } })">Actualizar</button>
                 @livewire('user.user-delete', ['userId' => $usuario->id], key($usuario->id))
             </div>
         @endif

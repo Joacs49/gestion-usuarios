@@ -9,9 +9,14 @@
         
         <div class="flex flex-row items-center justify-end w-full mr-5">
             @livewire('user.user-show')
-            <a href="{{ route('users.store.view') }}" class="flex relative items-center bg-white text-blue-700 pl-11 pr-4 py-2 rounded-md hover:bg-gray-200 duration-300">
-                <span class="absolute left-3 ml-0"><img class="object-cover w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/4885/4885554.png" alt="User"></span>
-                Nuevo Usuario</a>
+            <button 
+                onclick="Livewire.dispatch('open')"
+                class="flex relative items-center bg-white text-blue-700 pl-11 pr-4 py-2 rounded-md hover:bg-gray-200 duration-300 cursor-pointer">
+                <span class="absolute left-3 ml-0">
+                    <img class="object-cover w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/4885/4885554.png" alt="User">
+                </span>
+                Nuevo Usuario
+            </button>
         </div>
 
     </section>

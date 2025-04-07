@@ -1,6 +1,6 @@
 <div>
     @if($isOpen)
-        <div>
+        <section>
             <h1>Actualizar Usuario</h1>
 
             <form wire:submit.prevent="updateUser">
@@ -14,6 +14,6 @@
                 <button type="submit">Actualizar</button>
                 <button wire:click="$set('isOpen', false)">Cerrar</button>
             </form>
-        </div>
+        </section>
     @endif
 </div>
