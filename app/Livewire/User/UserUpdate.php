@@ -16,7 +16,6 @@ class UserUpdate extends Component
     {
         $userId = $data['id']; 
         $user = User::findOrFail($userId);
-
         $this->userId = $user->id;
         $this->name = $user->name;
         $this->lastname = $user->lastname;

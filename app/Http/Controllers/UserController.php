@@ -16,25 +16,4 @@ class UserController extends Controller
         
         }
     }
-
-    public function storeView()
-    {
-        try {
-            return view('user.store');
-        } catch (\Exception $e) {
-        
-        }
-    }
-
-    public function store(UserRequest $request)
-    {
-        try {
-            $request["password"] = bcrypt($request["password"]);
-            User::create($request->all());
-
-            return redirect()->route("users.index");
-        } catch (\Exception $e) {
-            
-        }
-    }
 }

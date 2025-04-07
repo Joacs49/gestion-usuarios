@@ -1,9 +1,10 @@
 <div>
-    @if($isOpen)
-        <section>
-            <h1>Actualizar Usuario</h1>
+    @if ($isOpen)
+        <section class="flex flex-col items-center justify-center h-screen">
+            <h1>Agregar Nuevo Usuario</h1>
 
-            <form wire:submit.prevent="updateUser">
+            <form wire:submit.prevent="storeUser">
+                @csrf
                 <input type="text" wire:model="name" placeholder="Nombre">
                 <input type="text" wire:model="lastname" placeholder="Apellido">
                 <input type="email" wire:model="email" placeholder="Correo Electrónico">
@@ -11,7 +12,9 @@
                 <input type="text" wire:model="country" placeholder="País">
                 <input type="text" wire:model="district" placeholder="Distrito">
                 <input type="text" wire:model="direction" placeholder="Dirección">
-                <button type="submit">Actualizar</button>
+                <input type="password" wire:model="password" placeholder="Dirección">
+
+                <button type="submit">Guardar</button>
                 <button wire:click="$set('isOpen', false)">Cerrar</button>
             </form>
         </section>

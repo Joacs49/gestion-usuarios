@@ -14,6 +14,8 @@
 
         @livewire('user.user-update')
 
+        @livewire('user.user-store')
+
         @livewireScripts
     </main>
 </body>
