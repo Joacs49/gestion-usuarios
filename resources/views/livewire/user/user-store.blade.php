@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="w-full h-full">
-                    <form wire:submit.prevent="storeUser" class="flex flex-col gap-4">
+                    <form id="createUserForm" wire:submit.prevent="storeUser" class="flex flex-row">
                         @csrf
                     
                         @if ($activeSection === 'personal')
@@ -63,11 +63,13 @@
                             </div>
                         @endif
                     
-                        <div class="flex justify-end gap-2 mt-4">
-                            <button type="button" wire:click="$set('isOpen', false)">Cancelar</button>
-                            <button type="submit">Crear Usuario</button>
-                        </div>
-                    </form>                    
+                    </form>    
+                    
+                    <div class="w-full h-full flex items-end justify-end">  
+                        <button type="button" wire:click="$set('isOpen', false)">Cancelar</button>
+                        <button type="submit" form="createUserForm">Crear Usuario</button>
+                    </div>
+
                 </div>
             </section>
         </section>
