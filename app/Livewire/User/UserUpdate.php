@@ -9,7 +9,6 @@ class UserUpdate extends Component
 {
     public $userId, $name, $lastname, $email, $numberphone, $country, $district, $direction, $password;
     public $isOpen = false;
-
     protected $listeners = ['openModal' => 'loadUser'];
 
     public function loadUser($data)

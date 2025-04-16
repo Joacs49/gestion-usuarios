@@ -9,7 +9,6 @@ class UserIndex extends Component
 {
     public $search = '';
     public $users = [];
-
     protected $listeners = [
         'searchUpdated' => 'buscarUsuarios',
         'userUpdated' => '$refresh',
