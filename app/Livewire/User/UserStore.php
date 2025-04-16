@@ -9,9 +9,7 @@ class UserStore extends Component
 {
     public $isOpen = false;
     public $name, $lastname, $email, $numberphone, $country, $district, $direction, $password;
-
     public $activeSection = 'personal';
-
     protected $listeners = ['open' => 'openModal'];
 
     public function openModal()
