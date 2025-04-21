@@ -11,7 +11,9 @@ class UserController extends Controller
     public function index()
     {
         try {
+            
             return view("user.index");
+
         } catch (\Exception $e) {
         
         }
