@@ -16,7 +16,6 @@
                 <div class="w-full h-full">
                     <form id="createUserForm" wire:submit.prevent="storeUser" class="flex flex-row">
                         @csrf
-                    
                         @if ($activeSection === 'personal')
                             <div class="flex items-start flex-col">
                                 <label for="name">Nombre:</label>
