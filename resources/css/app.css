@@ -33,6 +33,10 @@
     .bg-search {
         background-color: rgba(76, 145, 246, 1);
     }
+
+    .color-paragraph {
+        color:#71717a;
+    }
 }
 
 @theme {
