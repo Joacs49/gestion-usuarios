@@ -21,8 +21,8 @@
 
     </section>
 
-    <div class="overflow-x-auto w-95">
-        <table class="min-w-[600px] sm:min-w-full border-collapse shadow-md rounded-b-lg">
+    <div class="overflow-x-auto w-95 shadow-xl rounded-b-lg">
+        <table class="min-w-[600px] sm:min-w-full border-collapse">
           @if (isset($users) && !$users->isEmpty())
           <thead class="h-12 bg-table border-b border-gray-300 text-gray-500">
             <tr class="text-left">
