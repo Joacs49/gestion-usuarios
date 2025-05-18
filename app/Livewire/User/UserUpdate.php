@@ -51,8 +51,7 @@ class UserUpdate extends Component
 
         session()->flash('message', 'Usuario actualizado correctamente.');
         $this->isOpenUpdate = false;
-        $this->dispatch('userUpdated')->to(UserIndex::class);
-        $this->emit('userUpgraded'); 
+        $this->dispatch('userUpdated');
     }
 
     public function render()
