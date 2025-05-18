@@ -13,8 +13,8 @@
                 <button class="w-full text-left p-2 border-b-2 disabled font-bold">Acciones</button>
                 <button 
                     class="w-full text-left p-2 hover:bg-gray-200 cursor-pointer" 
-                    onclick="Livewire.dispatch('openModal', { data: { id: {{ $usuario->id }} } })">
-                    Actualizar
+                    wire:click="openModalUser({{ $usuario->id }})">
+                    Editar
                 </button>
 
                 @livewire('user.user-delete', ['userId' => $usuario->id], key($usuario->id))

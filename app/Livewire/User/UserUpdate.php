@@ -8,8 +8,8 @@ use Livewire\Component;
 class UserUpdate extends Component
 {
     public $userId, $name, $lastname, $email, $numberphone, $country, $district, $direction, $password;
-    public $isOpen = false;
-    protected $listeners = ['openModal' => 'loadUser'];
+    public $isOpenUpdate = false;
+    protected $listeners = ['openModalUser' => 'loadUser'];
 
     public function loadUser($data)
     {
@@ -23,7 +23,7 @@ class UserUpdate extends Component
         $this->country = $user->country;
         $this->district = $user->district;
         $this->direction = $user->direction;
-        $this->isOpen = true;
+        $this->isOpenUpdate = true;
     }
 
     public function updateUser()
@@ -50,8 +50,9 @@ class UserUpdate extends Component
         ]);
 
         session()->flash('message', 'Usuario actualizado correctamente.');
-        $this->isOpen = false;
-        $this->dispatch('userUpdated'); 
+        $this->isOpenUpdate = false;
+        $this->dispatch('userUpdated')->to(UserIndex::class);
+        $this->emit('userUpgraded'); 
     }
 
     public function render()

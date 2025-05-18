@@ -11,6 +11,7 @@ class UserActionSelect extends Component
 
     public $listeners = [
         'userDeleted' => 'showOptions',  
+        'userUpgraded' => 'showOptions',
     ];
 
     public function mount($usuario)
@@ -26,6 +27,11 @@ class UserActionSelect extends Component
     public function showOptions()
     {
         $this->showSelect = true;
+    }
+
+    public function openModalUser($id)
+    {
+        $this->dispatch('openModalUser', ['id' => $id]);
     }
 
     public function render()
